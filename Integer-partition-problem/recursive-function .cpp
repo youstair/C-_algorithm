@@ -1,4 +1,5 @@
 #include<cstdio>
+//根据递归函数直接计算整数划分的方案数目
 int f(int n, int m)
 {
 	if (m == 1 || n == 1) return 1;

@@ -1,6 +1,7 @@
 #include"stdafx.h"
 #include<cstdio>
 int n,mark[256];
+//将整数划分的结果暴力输出
 void display(int sum, int k, int pro)
 {
 	if (sum > n) return;
