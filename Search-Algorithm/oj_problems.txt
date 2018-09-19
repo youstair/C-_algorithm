@@ -1,0 +1,128 @@
+一般是不用hash的,所以很多时候称之为”暴力”,也就是穷举所有情况,一般看几个我们OJ的dfs的版本的题目就可以模仿着做了,
+因为牵涉到递归,初学者学的时候最好能举一反三,理解其中真谛.
+DFS --- EASY(15)
+ Tempter of the Bone
+ Safecracker
+ Prime Ring Problem
+ Robot Motion
+ Fire Net
+ 猜数字
+ Oil Deposits
+ Sum It Up
+ Red and Black
+ Shredding Company
+ Krypton Factor
+ Rank
+ How Many EquationsCan You Find
+ Accepted Necklace
+Lotto
+ 
+一般的DFS有时候可能会加入一些DP的思想,从而就变成了记忆化搜索,
+原理是将以前算过的状态记录下来,接下来的访问就不用继续递归计算,以后直接用就好了.
+DFS + DP --- EASY(7)
+ FatMouse and Cheese
+ A Walk Through theForest
+ Pascal's Travels
+ Anniversary party
+ Unidirectional TSP
+ Numbering Paths
+ Dota all stars
+ 
+DFS + DP --- NORMAL(1)
+ Islands and Bridges
+ 
+DFS --- NORMAL(16)
+ Sticks
+ Transportation
+ Square
+ IncreasingSequences
+ Free Candies
+ Anagrams by Stack
+ Station Balance
+ A Puzzling Problem
+ Vase collection
+ 哈密顿绕行世界问题
+ NecklaceDecomposition
+ Barbara Bennett'sWild Numbers
+ Sequence one
+ Islands
+ Pipes
+ No Left Turns
+ 
+BFS（Breadth First Search ）
+BFS --- EASY(17)
+ Ignatius and thePrincess I
+ Nightmare
+ 诡异的楼梯
+ Open the Lock
+ 超级密码
+ Asteroids!
+ Rescue
+ Hike on a Graph
+ 胜利大逃亡
+ N-Credible Mazes
+ Knight Moves
+ Basic wall maze
+ A strange lift
+ A计划
+ Game III
+ Hiking Trip
+ Hamburger Magi
+ 
+BFS --- NORMAL(27)
+ Gap
+ Remainder
+ The Proper Key
+ 胜利大逃亡(续)
+ The Treasure
+ Bubble Shooter
+ Copying DNA
+ Full Tank?
+ Cheesy Chess
+ Push Box
+ Key Task
+ Frogger
+ Prime Path
+ Frogger
+ Escape from EnemyTerritory
+ Escape
+ Bus Pass
+ Marbles in ThreeBaskets
+ Treasure of theChimp Island
+ 逃离迷宫
+ find the neareststation
+ Dogs
+ Lode Runner
+ Tobo or not Tobo
+ Sum of Digits
+Escape
+ An interesting mobilegame
+ 
+BFS+DFS --- EASY(4)
+ Collect More Jewels
+ 推箱子
+ Different Digits
+ Kaitou Kid - ThePhantom Thief (2)
+ 
+DoubleDirectionBFS(3)
+ Solitaire
+ 魔板
+ Bridged MarbleRings
+ 
+ 
+BS( Binary Search )(5)
+这类题目一般不会单一只有一个算法，一般都是二分+?（最大流，二分匹配，贪心，DP）等等，
+这里仅列出二分枚举的题目，即二分枚举答案，然后判断可行与否。
+ The Balance
+ Equations
+ Cable master
+ Sum Zero
+ Pie
+ 
+IDA Star (4)
+迭代加深本身不难，但是好的剪枝比较难想
+ DNA sequence
+ The Rotation Game
+ Booksort
+ Escape from Tetris
+ 
