@@ -1,0 +1,5 @@
+int a=2;
+for s=123/10;
+out sfau=2%2;
+#
+cout<<sfau;
