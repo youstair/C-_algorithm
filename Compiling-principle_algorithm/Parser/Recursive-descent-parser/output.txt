@@ -1,0 +1,40 @@
+语法分析结果如下
+ {  id  =  num  ;  while  (  id  <=  num  )  {  id  =  id  +  num  ;  }  } 
+语法分析过程如下：
+program-->block
+block-->{stmts}
+stmts-->stmt stmts
+stmt-->id=expr;
+expr-->term expr1
+term-->factor term1
+factor-->num
+term1-->null
+expr1-->null
+stmts-->stmt stmts
+stmt-->while(bool) stmt
+expr-->term expr1
+term-->factor term1
+factor-->id
+term1-->null
+expr1-->null
+bool-->expr<=expr
+expr-->term expr1
+term-->factor term1
+factor-->num
+term1-->null
+expr1-->null
+stmt-->block
+block-->{stmts}
+stmts-->stmt stmts
+stmt-->id=expr;
+expr-->term expr1
+term-->factor term1
+factor-->id
+term1-->null
+expr1-->+ term expr1term-->factor term1
+factor-->num
+term1-->null
+expr1-->null
+stmts-->null
+stmts-->null
+语法分析完成！
