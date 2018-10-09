@@ -3,19 +3,32 @@
     var queue = document.getElementById("queue"),
       state = [], //保存排序的中间状态
       msg = "请输入 10～100 的数字";
+      mseg="请输入 100~1000 的数字";
     init();
     //------------------------------->
     var LFT = [];
     var RGT = [];
+    var BASE=[];
+    var timespeed;
     //------------------------------->
-
-    var input = document.getElementById("in-number"),
+    var 
+      input = document.getElementById("in-number"),
       leftIn = document.getElementById("left-in"),
       rightIn = document.getElementById("right-in"),
       leftOut = document.getElementById("left-out"),
       rightOut = document.getElementById("right-out"),
-      btnBubble = document.getElementById("bubble-sort");
+      inspeed=document.getElementById("speed-controller"),
+      btnspeed=document.getElementById("time-controler"),
+    btnBubble = document.getElementById("bubble-sort");
     btnqSort = document.getElementById("quick-sort");
+    //------------------------------->
+    btnspeed.onclick = function () {
+      var speed = parseInt(inspeed.value);
+      if (!(speed >= 100 && speed <= 1000))
+        alert(mseg);
+      else timespeed = speed;
+    }
+    //------------------------------->
     leftIn.onclick = function () {
       var number = parseInt(input.value);
       if (!isNaN(number) && isBetween(number)) {
@@ -27,6 +40,7 @@
         alert(msg);
       }
     };
+    //------------------------------->
     rightIn.onclick = function () {
       var number = parseInt(input.value);
       if (!isNaN(number) && isBetween(number)) {
@@ -38,6 +52,7 @@
         alert(msg);
       }
     };
+    //------------------------------->
     leftOut.onclick = function () {
       var first = queue.firstElementChild;
       queue.removeChild(first);
@@ -87,6 +102,15 @@
       var current = state.shift() || [];
       var data1=LFT.shift();
       var data2=RGT.shift();
+      var data3=BASE.shift();
+      for(var i=0;i<bars.length;i++)
+      {
+        if(current[i]==data3)
+        {
+            setItem(bars[i],current[i],"blue");
+            break;
+        }
+      }
       for (var i = 0; i < bars.length; i++) 
       {
         // if(i==LFT.first()||i==RGT.first())
@@ -94,9 +118,10 @@
         //   setItem(bars[i], current[i],"red");
         // }
         // else 
+        if(current[i]==data3) continue;
         if(current[i]==data1||current[i]==data2)
         setItem(bars[i], current[i],"red");
-        else setItem(bars[i], current[i]);
+        else  setItem(bars[i], current[i]);
       }
       // LFT.pop();
       // RGT.pop();
@@ -105,7 +130,7 @@
       {
         // 关于延时函数：
         //https://www.haorooms.com/post/js_setTimeout
-        setTimeout(draw, 1000);
+        setTimeout(draw, timespeed);
       }
     }
     /*
@@ -167,17 +192,14 @@
             var tmp = arr[i];
             arr[i] = arr[j];
             arr[j] = tmp;
-            LFT.push(arr[i]);
-            RGT.push(arr[j]);
             state.push(JSON.parse(JSON.stringify(arr)));
           }
         }
         arr[l] = arr[i];
-        LFT.push(arr[l]);
-        RGT.push(arr[i]);
+        LFT.push(arr[j]);
         state.push(JSON.parse(JSON.stringify(arr)));
         arr[i] = temp;
-        LFT.push(arr[i]);
+        RGT.push(arr[i]);
         state.push(JSON.parse(JSON.stringify(arr)));
         Qsort(l, i - 1);
         Qsort(i + 1, r);
