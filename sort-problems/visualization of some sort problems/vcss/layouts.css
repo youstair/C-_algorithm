@@ -1,0 +1,21 @@
+button {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px lightgrey solid;
+}
+
+#left-out {
+    margin-left: 20px;
+}
+
+label {
+    display: inline-block;
+    margin-right: 10px;
+     background-color: green;
+    width: 20px;
+}
+
+#queue {
+    background-color: beige;
+    margin: 10px 0px;
+}
