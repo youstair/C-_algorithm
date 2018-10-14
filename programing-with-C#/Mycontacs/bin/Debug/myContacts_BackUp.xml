@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<myContacts>
+  <contact ContactId="8163101">
+    <Name>杜阳阳</Name>
+    <Gender>男</Gender>
+    <Age>20</Age>
+    <Birthdate>1997,11,13</Birthdate>
+    <Phone>13417623712</Phone>
+    <Profession>计算机系科学与技术</Profession>
+    <Email>12@qq.com</Email>
+    <Adress>中国</Adress>
+  </contact>
+  <contact ContactId="127356">
+    <Name>张三</Name>
+    <Gender>女</Gender>
+    <Age>19</Age>
+    <Birthdate>1998,01,01</Birthdate>
+    <Phone>1231244</Phone>
+    <Profession>信息安全</Profession>
+    <Email>12@qq.com</Email>
+    <Adress>中国</Adress>
+  </contact>
+</myContacts>

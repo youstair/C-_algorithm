@@ -1,0 +1,13 @@
+C:\Users\10149\source\repos\Mycontacs\obj\Debug\Mycontacs.Form1.resources
+C:\Users\10149\source\repos\Mycontacs\obj\Debug\Mycontacs.FormAdd.resources
+C:\Users\10149\source\repos\Mycontacs\obj\Debug\Mycontacs.FormEdit.resources
+C:\Users\10149\source\repos\Mycontacs\obj\Debug\Mycontacs.FormSearch.resources
+C:\Users\10149\source\repos\Mycontacs\obj\Debug\Mycontacs.Properties.Resources.resources
+C:\Users\10149\source\repos\Mycontacs\obj\Debug\Mycontacs.csproj.GenerateResource.Cache
+C:\Users\10149\source\repos\Mycontacs\obj\Debug\Mycontacs.csproj.CoreCompileInputs.cache
+C:\Users\10149\source\repos\Mycontacs\bin\Debug\Mycontacs.exe.config
+C:\Users\10149\source\repos\Mycontacs\bin\Debug\Mycontacs.exe
+C:\Users\10149\source\repos\Mycontacs\bin\Debug\Mycontacs.pdb
+C:\Users\10149\source\repos\Mycontacs\obj\Debug\Mycontacs.csprojResolveAssemblyReference.cache
+C:\Users\10149\source\repos\Mycontacs\obj\Debug\Mycontacs.exe
+C:\Users\10149\source\repos\Mycontacs\obj\Debug\Mycontacs.pdb

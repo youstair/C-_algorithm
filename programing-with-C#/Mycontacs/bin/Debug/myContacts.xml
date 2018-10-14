@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<myContacts>
+  <contact ContactId="127356">
+    <Name>张三</Name>
+    <Gender>女</Gender>
+    <Age>19</Age>
+    <Birthdate>1998,01,01</Birthdate>
+    <Phone>1231244</Phone>
+    <Profession>信息安全</Profession>
+    <Email>12@qq.com</Email>
+    <Adress>中国</Adress>
+  </contact>
+  <contact ContactId="815123123">
+    <Name>lsasda</Name>
+    <Gender>男</Gender>
+    <Age>20</Age>
+    <Birthdate>1998,01,01</Birthdate>
+    <Phone>123123123</Phone>
+    <Profession>信安</Profession>
+    <Email>1231@11.com</Email>
+    <Adress>中国</Adress>
+  </contact>
+</myContacts>
