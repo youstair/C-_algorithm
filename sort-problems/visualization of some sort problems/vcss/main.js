@@ -3,13 +3,15 @@
     var queue = document.getElementById("queue"),
       state = [], //保存排序的中间状态
       msg = "请输入 10～100 的数字";
-      mseg="请输入 100~1000 的数字";
+      mseg="请输入 100~10000 的数字";
     init();
     //------------------------------->
     var LFT = [];
     var RGT = [];
     var BASE=[];
+    // var BST=[];
     var timespeed;
+    // var psp=0;
     //------------------------------->
     var 
       input = document.getElementById("in-number"),
@@ -24,7 +26,7 @@
     //------------------------------->
     btnspeed.onclick = function () {
       var speed = parseInt(inspeed.value);
-      if (!(speed >= 100 && speed <= 1000))
+      if (!(speed >= 100 && speed <= 10000))
         alert(mseg);
       else timespeed = speed;
     }
@@ -97,15 +99,18 @@
     画出某一步时的状态
     参考：https://www.zhihu.com/question/41642706
     */
+   var psp=-100;
     function draw() {
       var bars = queue.children;
       var current = state.shift() || [];
       var data1=LFT.shift();
       var data2=RGT.shift();
-      var data3=BASE.shift();
+      var temp_data=BASE.shift();
+      if(temp_data!=-1)
+      psp=temp_data;
       for(var i=0;i<bars.length;i++)
       {
-        if(current[i]==data3)
+        if(current[i]==psp)
         {
             setItem(bars[i],current[i],"blue");
             break;
@@ -118,7 +123,7 @@
         //   setItem(bars[i], current[i],"red");
         // }
         // else 
-        if(current[i]==data3) continue;
+        if(current[i]==psp) continue;
         if(current[i]==data1||current[i]==data2)
         setItem(bars[i], current[i],"red");
         else  setItem(bars[i], current[i]);
@@ -174,6 +179,8 @@
       function Qsort(l, r) {
         if (l > r) return;
         var temp = arr[l];
+        // BST.push(psp);
+        BASE.push(temp);
         var i = l;
         var j = r;
         while (i < j) {
@@ -192,15 +199,21 @@
             var tmp = arr[i];
             arr[i] = arr[j];
             arr[j] = tmp;
+            LFT.push(arr[j]);
+            RGT.push(arr[i]);
+            BASE.push(-1);
             state.push(JSON.parse(JSON.stringify(arr)));
           }
         }
         arr[l] = arr[i];
-        LFT.push(arr[j]);
+         LFT.push(arr[l]);
+        BASE.push(-1);
         state.push(JSON.parse(JSON.stringify(arr)));
         arr[i] = temp;
         RGT.push(arr[i]);
+        BASE.push(-1);
         state.push(JSON.parse(JSON.stringify(arr)));
+        // psp++;
         Qsort(l, i - 1);
         Qsort(i + 1, r);
       }
