@@ -26,18 +26,10 @@ def get_out_p(p):
         sr+=str(i)
     return sr
 def Print():
-    sr=get_out_p(status_p)
-    i=0
-    while i<20-len(status_p) :
-        sr+=' '
-        i+=1
-    sr+=get_out_p(symbol_p)
-    i=0
-    while i<20-len(symbol_p):
-        sr+=' '
-        i+=1
-    sr+=get_out_p(instr_p)
-    print(sr)
+    sr1=get_out_p(status_p)
+    sr2=get_out_p(symbol_p)
+    sr3=get_out_p(instr_p)
+    print('%-20s%-20s%-20s' % (sr1,sr2,sr3))
     return
 def goto_char():
     if len(instr_p)==0 :
